@@ -11,12 +11,12 @@
 
 #define NUM_PIXELS 1
 
-int signal_high;
+int signal;
 
 CRGB leds[NUM_PIXELS];
 
 void setup() {
-    signal_high = 0;
+    signal = 0;
     pinMode(PIN_LED,OUTPUT);
     pinMode(PIN_SIGNAL,INPUT);
     digitalWrite(PIN_LED,LOW);
