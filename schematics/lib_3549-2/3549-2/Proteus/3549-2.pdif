@@ -1,0 +1,205 @@
+;Proteus Design Interchange Format
+(PDIF
+ (vendor "SamacSys Limited")
+ (version 1 0)
+ (library
+  (part "3549-2"
+   (description "Fuse Holder FUSE SOCKET MINI HORZ .700 X .394")
+   (family "FUS")
+   (package "35492")
+   (attribute "Datasheet Link" "https://componentsearchengine.com/Datasheets/1/3549-2.pdf")
+   (attribute "Geometry.Height" "5.66mm")
+   (attribute "Mouser Part Number" "534-3549-2")
+   (attribute "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Keystone-Electronics/3549-2?qs=fP5bVVCrK%2Fei3gwwxH1JKw%3D%3D")
+   (attribute "Manufacturer_Name" "Keystone Electronics")
+   (attribute "Manufacturer_Part_Number" "3549-2")
+   (gate
+    (symbol "3549-2")
+    (pin "1" 1 PS)
+    (pin "2" 2 PS)
+    (pin "3" 3 PS)
+    (pin "4" 4 PS)
+   )
+  )
+  (symbol "3549-2"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 200 100) (pt 600 100) (pt 600 -200) (pt 200 -200) (pt 200 100) (closed))
+   )
+   (terminal
+    (body (symbol "PIN") (pt 0 -100) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 800 -100) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 800 0) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 0) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+  )
+  (symbol "PIN"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 200 0))))
+  (symbol "PINSHORT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 100 0))))
+  (package "35492"
+   (units MM)
+   (layer TASM
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed true)
+      (pt -8.9 -5)
+      (pt 8.9 -5)
+      (pt 8.9 5)
+      (pt -8.9 5)
+      (pt -8.9 -5))))
+   (layer TSLK
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -5.5 5)
+      (pt -8.9 5)
+      (pt -8.9 5)
+      (pt -5.5 5)
+      (pt -5.5 5))))
+   (layer TSLK
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -8.9 5)
+      (pt -8.9 5)
+      (pt -8.9 -5)
+      (pt -8.9 -5)
+      (pt -8.9 5))))
+   (layer TSLK
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -8.9 -5)
+      (pt -6 -5)
+      (pt -6 -5)
+      (pt -8.9 -5)
+      (pt -8.9 -5))))
+   (layer TSLK
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -1.75 -5)
+      (pt 1.5 -5)
+      (pt 1.5 -5)
+      (pt -1.75 -5)
+      (pt -1.75 -5))))
+   (layer TSLK
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -2.25 5)
+      (pt 2.25 5)
+      (pt 2.25 5)
+      (pt -2.25 5)
+      (pt -2.25 5))))
+   (layer TSLK
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt 5.5 5)
+      (pt 8.9 5)
+      (pt 8.9 5)
+      (pt 5.5 5)
+      (pt 5.5 5))))
+   (layer TSLK
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt 8.9 5)
+      (pt 8.9 5)
+      (pt 8.9 -5)
+      (pt 8.9 -5)
+      (pt 8.9 5))))
+   (layer TSLK
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt 8.9 -5)
+      (pt 6 -5)
+      (pt 6 -5)
+      (pt 8.9 -5)
+      (pt 8.9 -5))))
+   (layer OCCA
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -9.9 7.065)
+      (pt 9.9 7.065)
+      (pt 9.9 -8.35)
+      (pt -9.9 -8.35)
+      (pt -9.9 7.065))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -3.9 -7.3)
+      (arc (pt -3.900 -7.300) (pt -3.900 -7.350) (pt -3.800 -7.250) (start 180.0) (sweep 180.0))
+      (pt -3.8 -7.3)
+      (arc (pt -3.800 -7.300) (pt -3.900 -7.350) (pt -3.800 -7.250) (start 180.0) (sweep .0))
+      (pt -3.9 -7.3)
+      (arc (pt -3.900 -7.300) (pt -3.900 -7.350) (pt -3.800 -7.250) (start 180.0) (sweep 180.0))
+      (pt -3.8 -7.3))))
+   (leg 1 (pt -3.750 -5.150) (padstack 0))
+   (leg 2 (pt 3.750 -5.150) (padstack 0))
+   (leg 3 (pt 3.750 5.150) (padstack 3))
+   (leg 4 (pt -3.750 5.150) (padstack 4))
+   (padstack 0
+    (hole 1.98)
+    (plated true)
+    (pad (layer TCOP) (round 2.970))
+    (pad (layer INNER) (round 2.970))
+    (pad (layer BCOP) (round 2.970))
+   )
+   (padstack 3
+    (hole 1.22)
+    (plated true)
+    (pad (layer TCOP) (round 1.830))
+    (pad (layer INNER) (round 1.830))
+    (pad (layer BCOP) (round 1.830))
+   )
+   (padstack 4
+    (hole 1.22)
+    (plated true)
+    (pad (layer TCOP) (round 1.830))
+    (pad (layer INNER) (round 1.830))
+    (pad (layer BCOP) (round 1.830))
+   )
+   (model "3549-2.stp"
+    (euler 0 0 0)
+    (offset 0 0 0)
+   )
+  )
+ )
+)
