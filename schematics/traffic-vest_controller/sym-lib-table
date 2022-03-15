@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name 3549-2)(type Legacy)(uri "/home/nemo/Documents/School/Vt Tech/Classes/Spring 2022/electrical-project_ELT-2720/blinker-vest/schematics/lib/3549-2/3549-2/KiCad/3549-2.lib")(options "")(descr "3549-2 Mini Blade Fuseholder - Horizontal Entry"))
+  (lib (name traffic-vest_controller-rescue)(type Legacy)(uri ${KIPRJMOD}/traffic-vest_controller-rescue.lib)(options "")(descr ""))
+)
