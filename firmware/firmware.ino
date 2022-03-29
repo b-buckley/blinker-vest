@@ -5,6 +5,11 @@
 //External includes
 #include "FastLED.h"
 
+//Brake Timer Interrupt Macros
+#define CLOCKSPEED 16000000
+#define TIMER_FREQUENCY 24
+#define CMR_RESOLUTION 1024
+
 //Pin Definition Macros
 #define PIN_LED 13
 #define PIN_LEFT_SIG 2
@@ -33,6 +38,7 @@ volatile int sigLeftState,
     signal = 0,
     previousTime = 0,
     currentTime,
+    leftFrameCount = 0,
     sigLeftMark = 0,
     sigLeftCurrTime,
     sigLeftSeconds,
@@ -53,7 +59,8 @@ void setupInterrupt_Timer(){
     TCCR1B = 0;// same for TCCR1B
     TCNT1  = 0;//initialize counter value to 0
     // set compare match register for 15hz increments
-    OCR1A = 1041;// = (16*10^6) / (15*1024) - 1 (must be <65536)
+    //OCR1A = 1041;// = (16*10^6) / (15*1024) - 1 (must be <65536)
+    OCR1A = (CLOCKSPEED / (TIMER_FREQUENCY * CMR_RESOLUTION)) - 1;
     // turn on CTC mode
     TCCR1B |= (1 << WGM12);
     // Set CS10 and CS12 bits for 1024 prescaler
@@ -62,18 +69,34 @@ void setupInterrupt_Timer(){
     TIMSK1 |= (1 << OCIE1A);
 }
 
+void leftFrameHandler() {
+
+    #define DUTY_CYCLE (TIMER_FREQUENCY/2)
+        
+    if (sigLeftState) {
+        if (leftFrameCount == TIMER_FREQUENCY) leftFrameCount = 0;
+        if (leftFrameCount == 0) leds[LEFT_OUT] = CHSV(40,255,255);
+        if (leftFrameCount > DUTY_CYCLE) leds[LEFT_OUT] = CHSV(0,0,0);
+        leftFrameCount++;
+    }
+    else leds[LEFT_OUT] = CHSV(40,255,100);
+}
+
 ISR(TIMER1_COMPA_vect){
     //Quick-n-dirty brake signal handling
     if (sigBrake) {
-        leds[BRAKE_OUT] = CRGB(255,0,0);
+        leds[BRAKE_OUT] = CHSV(0,255,255);
     }
     else {
-        leds[BRAKE_OUT] = CRGB(100,0,0);
+        leds[BRAKE_OUT] = CHSV(0,255,100);
     }
 
     //Handle left signal
+    leftFrameHandler();
+/*
     if (sigLeftState) {
-        
+ 
+           
         if(sigLeftMark == 0) sigLeftMark = millis();
         sigLeftCurrTime = millis();
         sigLeftSeconds = (sigLeftCurrTime - sigLeftMark) / 1000;
@@ -87,7 +110,7 @@ ISR(TIMER1_COMPA_vect){
     else {
         leds[LEFT_OUT] = CRGB::Black;
     }
-
+*/
     //Right turn handling
     if (sigRightState) {
         
@@ -118,6 +141,7 @@ void leftSignalHandler(){
     if (sigLeft) { //If left turn signal is on now, it was off previously
         // Do all the WAS-OFF stuff
         sigLeftState = ON;
+        leftFrameCount = 0;
     }
     else {
         // Do all the WAS_ON stuff
@@ -166,8 +190,6 @@ void loop() {
     currentTime = millis();
 
     //One var for each signal... replace with ext. interrupts?
-//    sigLeft = digitalRead(PIN_LEFT_SIG);
     sigBrake = digitalRead(PIN_BRAKE_SIG);
-//    sigRight = digitalRead(PIN_RIGHT_SIG);
 
 }
