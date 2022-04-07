@@ -44,34 +44,34 @@ Wire Wire Line
 $Comp
 L Device:R_US R6
 U 1 1 620FAD24
-P 5000 3400
-F 0 "R6" H 5068 3446 50  0000 L CNN
-F 1 "10k" H 5068 3355 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 5040 3390 50  0001 C CNN
-F 3 "~" H 5000 3400 50  0001 C CNN
-	1    5000 3400
+P 5300 3450
+F 0 "R6" H 5368 3496 50  0000 L CNN
+F 1 "10k" H 5368 3405 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 5340 3440 50  0001 C CNN
+F 3 "~" H 5300 3450 50  0001 C CNN
+	1    5300 3450
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R_US R5
 U 1 1 620FD1D0
-P 4850 3250
-F 0 "R5" V 4645 3250 50  0000 C CNN
-F 1 "20k" V 4736 3250 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 4890 3240 50  0001 C CNN
-F 3 "~" H 4850 3250 50  0001 C CNN
-	1    4850 3250
+P 5150 3300
+F 0 "R5" V 4945 3300 50  0000 C CNN
+F 1 "20k" V 5036 3300 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 5190 3290 50  0001 C CNN
+F 3 "~" H 5150 3300 50  0001 C CNN
+	1    5150 3300
 	0    1    1    0   
 $EndComp
 $Comp
 L power:GNDREF #PWR0106
 U 1 1 62145627
-P 5000 3550
-F 0 "#PWR0106" H 5000 3300 50  0001 C CNN
-F 1 "GNDREF" H 5005 3377 50  0001 C CNN
-F 2 "" H 5000 3550 50  0001 C CNN
-F 3 "" H 5000 3550 50  0001 C CNN
-	1    5000 3550
+P 5300 3600
+F 0 "#PWR0106" H 5300 3350 50  0001 C CNN
+F 1 "GNDREF" H 5305 3427 50  0001 C CNN
+F 2 "" H 5300 3600 50  0001 C CNN
+F 3 "" H 5300 3600 50  0001 C CNN
+	1    5300 3600
 	1    0    0    -1  
 $EndComp
 Text Notes 7400 7500 0    50   ~ 10
@@ -81,34 +81,34 @@ Text Notes 8150 7650 0    50   ~ 10
 $Comp
 L power:GNDREF #PWR0107
 U 1 1 62145970
-P 5400 2450
-F 0 "#PWR0107" H 5400 2200 50  0001 C CNN
-F 1 "GNDREF" H 5405 2277 50  0001 C CNN
-F 2 "" H 5400 2450 50  0001 C CNN
-F 3 "" H 5400 2450 50  0001 C CNN
-	1    5400 2450
+P 5300 3050
+F 0 "#PWR0107" H 5300 2800 50  0001 C CNN
+F 1 "GNDREF" H 5305 2877 50  0001 C CNN
+F 2 "" H 5300 3050 50  0001 C CNN
+F 3 "" H 5300 3050 50  0001 C CNN
+	1    5300 3050
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R_US R3
 U 1 1 620FD795
-P 5250 2150
-F 0 "R3" V 5045 2150 50  0000 C CNN
-F 1 "20k" V 5136 2150 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 5290 2140 50  0001 C CNN
-F 3 "~" H 5250 2150 50  0001 C CNN
-	1    5250 2150
+P 5150 2750
+F 0 "R3" V 4945 2750 50  0000 C CNN
+F 1 "20k" V 5036 2750 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 5190 2740 50  0001 C CNN
+F 3 "~" H 5150 2750 50  0001 C CNN
+	1    5150 2750
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R_US R4
 U 1 1 620FBD59
-P 5400 2300
-F 0 "R4" H 5468 2346 50  0000 L CNN
-F 1 "10k" H 5468 2255 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 5440 2290 50  0001 C CNN
-F 3 "~" H 5400 2300 50  0001 C CNN
-	1    5400 2300
+P 5300 2900
+F 0 "R4" H 5368 2946 50  0000 L CNN
+F 1 "10k" H 5368 2855 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 5340 2890 50  0001 C CNN
+F 3 "~" H 5300 2900 50  0001 C CNN
+	1    5300 2900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -116,37 +116,36 @@ Wire Wire Line
 $Comp
 L power:GNDREF #PWR0108
 U 1 1 62143F63
-P 5000 3000
-F 0 "#PWR0108" H 5000 2750 50  0001 C CNN
-F 1 "GNDREF" H 5005 2827 50  0001 C CNN
-F 2 "" H 5000 3000 50  0001 C CNN
-F 3 "" H 5000 3000 50  0001 C CNN
-	1    5000 3000
+P 5400 2400
+F 0 "#PWR0108" H 5400 2150 50  0001 C CNN
+F 1 "GNDREF" H 5405 2227 50  0001 C CNN
+F 2 "" H 5400 2400 50  0001 C CNN
+F 3 "" H 5400 2400 50  0001 C CNN
+	1    5400 2400
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R_US R7
 U 1 1 620FC6E1
-P 4850 2700
-F 0 "R7" V 4645 2700 50  0000 C CNN
-F 1 "20k" V 4736 2700 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 4890 2690 50  0001 C CNN
-F 3 "~" H 4850 2700 50  0001 C CNN
-	1    4850 2700
+P 5250 2100
+F 0 "R7" V 5045 2100 50  0000 C CNN
+F 1 "20k" V 5136 2100 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 5290 2090 50  0001 C CNN
+F 3 "~" H 5250 2100 50  0001 C CNN
+	1    5250 2100
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R_US R8
 U 1 1 620FA2CA
-P 5000 2850
-F 0 "R8" H 5068 2896 50  0000 L CNN
-F 1 "10k" H 5068 2805 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 5040 2840 50  0001 C CNN
-F 3 "~" H 5000 2850 50  0001 C CNN
-	1    5000 2850
+P 5400 2250
+F 0 "R8" H 5468 2296 50  0000 L CNN
+F 1 "10k" H 5468 2205 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 5440 2240 50  0001 C CNN
+F 3 "~" H 5400 2250 50  0001 C CNN
+	1    5400 2250
 	1    0    0    -1  
 $EndComp
-Connection ~ 5000 2700
 $Comp
 L Device:R_US R1
 U 1 1 6215D85B
@@ -203,23 +202,21 @@ Wire Wire Line
 Connection ~ 6300 4000
 Wire Wire Line
 	6300 4000 6500 4000
-Wire Wire Line
-	5700 3500 5600 3500
 $Comp
 L traffic-vest_controller-rescue:3549-2-3549-2 F3
 U 1 1 622880EB
-P 3800 2050
-F 0 "F3" H 4200 2315 50  0000 C CNN
-F 1 "1A" H 4200 2224 50  0000 C CNN
-F 2 "3549-2:35492" H 4450 2150 50  0001 L CNN
-F 3 "https://componentsearchengine.com/Datasheets/1/3549-2.pdf" H 4450 2050 50  0001 L CNN
-F 4 "Fuse Holder FUSE SOCKET MINI HORZ .700 X .394" H 4450 1950 50  0001 L CNN "Description"
-F 5 "5.66" H 4450 1850 50  0001 L CNN "Height"
-F 6 "534-3549-2" H 4450 1750 50  0001 L CNN "Mouser Part Number"
-F 7 "https://www.mouser.co.uk/ProductDetail/Keystone-Electronics/3549-2?qs=fP5bVVCrK%2Fei3gwwxH1JKw%3D%3D" H 4450 1650 50  0001 L CNN "Mouser Price/Stock"
-F 8 "Keystone Electronics" H 4450 1550 50  0001 L CNN "Manufacturer_Name"
-F 9 "3549-2" H 4450 1450 50  0001 L CNN "Manufacturer_Part_Number"
-	1    3800 2050
+P 4100 2650
+F 0 "F3" H 4500 2915 50  0000 C CNN
+F 1 "1A" H 4500 2824 50  0000 C CNN
+F 2 "3549-2:35492" H 4750 2750 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/3549-2.pdf" H 4750 2650 50  0001 L CNN
+F 4 "Fuse Holder FUSE SOCKET MINI HORZ .700 X .394" H 4750 2550 50  0001 L CNN "Description"
+F 5 "5.66" H 4750 2450 50  0001 L CNN "Height"
+F 6 "534-3549-2" H 4750 2350 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Keystone-Electronics/3549-2?qs=fP5bVVCrK%2Fei3gwwxH1JKw%3D%3D" H 4750 2250 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Keystone Electronics" H 4750 2150 50  0001 L CNN "Manufacturer_Name"
+F 9 "3549-2" H 4750 2050 50  0001 L CNN "Manufacturer_Part_Number"
+	1    4100 2650
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -258,12 +255,12 @@ $EndComp
 $Comp
 L Connector_Generic:Conn_01x01 H1
 U 1 1 622B1C15
-P 3550 2600
-F 0 "H1" V 3787 2603 50  0000 C CNN
-F 1 "Bike Left" V 3696 2603 50  0000 C CNN
-F 2 "Connector_Wire:SolderWirePad_1x01_Drill1.5mm" H 3550 2600 50  0001 C CNN
-F 3 "~" H 3550 2600 50  0001 C CNN
-	1    3550 2600
+P 3850 2100
+F 0 "H1" V 4087 2103 50  0000 C CNN
+F 1 "Bike Left" V 3996 2103 50  0000 C CNN
+F 2 "Connector_Wire:SolderWirePad_1x01_Drill2mm" H 3850 2100 50  0001 C CNN
+F 3 "~" H 3850 2100 50  0001 C CNN
+	1    3850 2100
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -272,7 +269,7 @@ U 1 1 622B9006
 P 3550 4700
 F 0 "H5" V 3787 4703 50  0000 C CNN
 F 1 "Bike Ground" V 3696 4703 50  0000 C CNN
-F 2 "Connector_Wire:SolderWirePad_1x01_Drill1.5mm" H 3550 4700 50  0001 C CNN
+F 2 "Connector_Wire:SolderWirePad_1x01_Drill2mm" H 3550 4700 50  0001 C CNN
 F 3 "~" H 3550 4700 50  0001 C CNN
 	1    3550 4700
 	-1   0    0    1   
@@ -294,7 +291,7 @@ U 1 1 622B0FB1
 P 3550 4200
 F 0 "H4" V 3787 4203 50  0000 C CNN
 F 1 "Bike Power" V 3696 4203 50  0000 C CNN
-F 2 "Connector_Wire:SolderWirePad_1x01_Drill1.5mm" H 3550 4200 50  0001 C CNN
+F 2 "Connector_Wire:SolderWirePad_1x01_Drill2mm" H 3550 4200 50  0001 C CNN
 F 3 "~" H 3550 4200 50  0001 C CNN
 	1    3550 4200
 	-1   0    0    1   
@@ -302,19 +299,16 @@ $EndComp
 $Comp
 L Connector_Generic:Conn_01x01 H3
 U 1 1 622B1527
-P 3550 2050
-F 0 "H3" V 3787 2053 50  0000 C CNN
-F 1 "Bike Right" V 3696 2053 50  0000 C CNN
-F 2 "Connector_Wire:SolderWirePad_1x01_Drill1.5mm" H 3550 2050 50  0001 C CNN
-F 3 "~" H 3550 2050 50  0001 C CNN
-	1    3550 2050
+P 3850 2650
+F 0 "H3" V 4087 2653 50  0000 C CNN
+F 1 "Bike Right" V 3996 2653 50  0000 C CNN
+F 2 "Connector_Wire:SolderWirePad_1x01_Drill2mm" H 3850 2650 50  0001 C CNN
+F 3 "~" H 3850 2650 50  0001 C CNN
+	1    3850 2650
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	6850 4700 6850 4850
-Wire Wire Line
-	5600 3500 5600 4450
-Connection ~ 5400 2150
 $Comp
 L traffic-vest_controller-rescue:3549-2-3549-2 F4
 U 1 1 622887C7
@@ -335,108 +329,108 @@ $EndComp
 $Comp
 L Connector_Generic:Conn_01x01 H2
 U 1 1 622B18CF
-P 3550 3150
-F 0 "H2" V 3787 3153 50  0000 C CNN
-F 1 "Bike Brake" V 3696 3153 50  0000 C CNN
-F 2 "Connector_Wire:SolderWirePad_1x01_Drill1.5mm" H 3550 3150 50  0001 C CNN
-F 3 "~" H 3550 3150 50  0001 C CNN
-	1    3550 3150
+P 3850 3200
+F 0 "H2" V 4087 3203 50  0000 C CNN
+F 1 "Bike Brake" V 3996 3203 50  0000 C CNN
+F 2 "Connector_Wire:SolderWirePad_1x01_Drill2mm" H 3850 3200 50  0001 C CNN
+F 3 "~" H 3850 3200 50  0001 C CNN
+	1    3850 3200
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	5400 2150 5600 2150
 $Comp
 L traffic-vest_controller-rescue:3549-2-3549-2 F2
 U 1 1 62287AD4
-P 3800 3150
-F 0 "F2" H 4200 3415 50  0000 C CNN
-F 1 "1A" H 4200 3324 50  0000 C CNN
-F 2 "3549-2:35492" H 4450 3250 50  0001 L CNN
-F 3 "https://componentsearchengine.com/Datasheets/1/3549-2.pdf" H 4450 3150 50  0001 L CNN
-F 4 "Fuse Holder FUSE SOCKET MINI HORZ .700 X .394" H 4450 3050 50  0001 L CNN "Description"
-F 5 "5.66" H 4450 2950 50  0001 L CNN "Height"
-F 6 "534-3549-2" H 4450 2850 50  0001 L CNN "Mouser Part Number"
-F 7 "https://www.mouser.co.uk/ProductDetail/Keystone-Electronics/3549-2?qs=fP5bVVCrK%2Fei3gwwxH1JKw%3D%3D" H 4450 2750 50  0001 L CNN "Mouser Price/Stock"
-F 8 "Keystone Electronics" H 4450 2650 50  0001 L CNN "Manufacturer_Name"
-F 9 "3549-2" H 4450 2550 50  0001 L CNN "Manufacturer_Part_Number"
-	1    3800 3150
+P 4100 3200
+F 0 "F2" H 4500 3465 50  0000 C CNN
+F 1 "1A" H 4500 3374 50  0000 C CNN
+F 2 "3549-2:35492" H 4750 3300 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/3549-2.pdf" H 4750 3200 50  0001 L CNN
+F 4 "Fuse Holder FUSE SOCKET MINI HORZ .700 X .394" H 4750 3100 50  0001 L CNN "Description"
+F 5 "5.66" H 4750 3000 50  0001 L CNN "Height"
+F 6 "534-3549-2" H 4750 2900 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Keystone-Electronics/3549-2?qs=fP5bVVCrK%2Fei3gwwxH1JKw%3D%3D" H 4750 2800 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Keystone Electronics" H 4750 2700 50  0001 L CNN "Manufacturer_Name"
+F 9 "3549-2" H 4750 2600 50  0001 L CNN "Manufacturer_Part_Number"
+	1    4100 3200
 	1    0    0    -1  
 $EndComp
-Connection ~ 5000 3250
 Wire Wire Line
 	6850 3750 6850 4200
 Wire Wire Line
 	3750 4700 3750 4850
 Wire Wire Line
-	5600 4450 6850 4450
+	4050 2650 4050 2750
 Wire Wire Line
-	3750 2050 3750 2150
+	4050 2750 4100 2750
 Wire Wire Line
-	3750 2150 3800 2150
+	4900 2650 5000 2650
 Wire Wire Line
-	4600 2050 4700 2050
+	5000 2650 5000 2750
 Wire Wire Line
-	4700 2050 4700 2150
+	4050 3200 4050 3300
 Wire Wire Line
-	4700 2150 5100 2150
-Wire Wire Line
-	3750 3150 3750 3250
-Wire Wire Line
-	3750 3250 3800 3250
-Wire Wire Line
-	5500 4100 5500 4200
-Wire Wire Line
-	5500 4200 6850 4200
+	4050 3300 4100 3300
 Connection ~ 6850 4200
 Wire Wire Line
 	3750 4200 3750 4100
 Wire Wire Line
 	3750 4100 3850 4100
-Wire Wire Line
-	4650 4100 5500 4100
 $Comp
 L traffic-vest_controller-rescue:3549-2-3549-2 F1
 U 1 1 62286CF1
-P 3800 2600
-F 0 "F1" H 4200 2865 50  0000 C CNN
-F 1 "1A" H 4200 2774 50  0000 C CNN
-F 2 "3549-2:35492" H 4450 2700 50  0001 L CNN
-F 3 "https://componentsearchengine.com/Datasheets/1/3549-2.pdf" H 4450 2600 50  0001 L CNN
-F 4 "Fuse Holder FUSE SOCKET MINI HORZ .700 X .394" H 4450 2500 50  0001 L CNN "Description"
-F 5 "5.66" H 4450 2400 50  0001 L CNN "Height"
-F 6 "534-3549-2" H 4450 2300 50  0001 L CNN "Mouser Part Number"
-F 7 "https://www.mouser.co.uk/ProductDetail/Keystone-Electronics/3549-2?qs=fP5bVVCrK%2Fei3gwwxH1JKw%3D%3D" H 4450 2200 50  0001 L CNN "Mouser Price/Stock"
-F 8 "Keystone Electronics" H 4450 2100 50  0001 L CNN "Manufacturer_Name"
-F 9 "3549-2" H 4450 2000 50  0001 L CNN "Manufacturer_Part_Number"
-	1    3800 2600
+P 4100 2100
+F 0 "F1" H 4500 2365 50  0000 C CNN
+F 1 "1A" H 4500 2274 50  0000 C CNN
+F 2 "3549-2:35492" H 4750 2200 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/3549-2.pdf" H 4750 2100 50  0001 L CNN
+F 4 "Fuse Holder FUSE SOCKET MINI HORZ .700 X .394" H 4750 2000 50  0001 L CNN "Description"
+F 5 "5.66" H 4750 1900 50  0001 L CNN "Height"
+F 6 "534-3549-2" H 4750 1800 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Keystone-Electronics/3549-2?qs=fP5bVVCrK%2Fei3gwwxH1JKw%3D%3D" H 4750 1700 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Keystone Electronics" H 4750 1600 50  0001 L CNN "Manufacturer_Name"
+F 9 "3549-2" H 4750 1500 50  0001 L CNN "Manufacturer_Part_Number"
+	1    4100 2100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5000 2700 5600 2700
+	4050 2100 4050 2200
 Wire Wire Line
-	4600 2600 4700 2600
+	4050 2200 4100 2200
 Wire Wire Line
-	4700 2600 4700 2700
+	4900 3200 5000 3200
 Wire Wire Line
-	3750 2600 3750 2700
+	5000 3200 5000 3300
 Wire Wire Line
-	3750 2700 3800 2700
+	4700 4200 4700 4100
 Wire Wire Line
-	4600 3150 4700 3150
+	4700 4100 4650 4100
 Wire Wire Line
-	4700 3150 4700 3250
-Wire Wire Line
-	5650 3250 5650 2800
-Wire Wire Line
-	5650 2800 5700 2800
-Wire Wire Line
-	5000 3250 5650 3250
-Wire Wire Line
-	5600 2700 5600 2600
-Wire Wire Line
-	5600 2600 5700 2600
-Wire Wire Line
-	5600 2150 5600 2500
+	4700 4200 6850 4200
 Wire Wire Line
 	5600 2500 5700 2500
+Wire Wire Line
+	4900 2100 5100 2100
+Wire Wire Line
+	5400 2100 5600 2100
+Wire Wire Line
+	5600 2100 5600 2500
+Connection ~ 5400 2100
+Wire Wire Line
+	5300 2750 5300 2600
+Wire Wire Line
+	5300 2600 5700 2600
+Connection ~ 5300 2750
+Wire Wire Line
+	5700 2700 5500 2700
+Wire Wire Line
+	5500 2700 5500 3300
+Wire Wire Line
+	5500 3300 5300 3300
+Connection ~ 5300 3300
+Wire Wire Line
+	5700 3500 5550 3500
+Wire Wire Line
+	5550 3500 5550 4450
+Wire Wire Line
+	5550 4450 6850 4450
 $EndSCHEMATC
