@@ -23,7 +23,7 @@ email: ben.buckley.vt@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Project site, Ben Buckley, ELT-2720, Vermont Tech., Spring 2022
 #baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://b-buckley.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+#url: "https://b-buckley.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: nunyabidness
 github_username:  b-buckley
 
