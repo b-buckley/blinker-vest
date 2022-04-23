@@ -1,2 +1,5 @@
-# archive/ holds data files from external sources that don't need to be tracked
-/archive/*
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
