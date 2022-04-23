@@ -20,16 +20,15 @@
 
 title: Traffic Vest Project -- Ben Buckley -- ELT-2720 -- Spring, 2022 
 email: ben.buckley.vt@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-        Project homepage for Ben Buckley's Traffic Signal Vest for Motorcycling,
-        ELT-2720 "Electrical Project", Spring 2022, Vermont Technical College
+description: >- # this means to ignore newlines until "baseurl:" 
+  Project homepage for Ben Buckley's Traffic Signal Vest for Motorcycling, ELT-2720 "Electrical Project", Spring 2022, Vermont Technical College
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://b-buckley.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: @nunayabidness 
+url: https://b-buckley.github.io # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: nunayabidness 
 github_username: b-buckley 
 
 # Build settings
-theme: midnight
+theme: jekyll-theme-midnight 
 plugins:
   - jekyll-feed
 
