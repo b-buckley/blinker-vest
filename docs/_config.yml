@@ -22,7 +22,7 @@ title: Traffic Signal Vest
 email: ben.buckley.vt@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Project site for Ben Buckley's wearable, programmable traffic signals for motorcycling.
-baseurl: "/blinker-vest/docs" # the subpath of your site, e.g. /blog
+baseurl: "/blinker-vest" # the subpath of your site, e.g. /blog
 url: "https://b-buckley.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 
 github_username: b-buckley 
