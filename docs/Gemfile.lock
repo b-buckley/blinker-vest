@@ -277,9 +277,8 @@ PLATFORMS
 DEPENDENCIES
   github-pages (~> 226)
   http_parser.rb (~> 0.6.0)
-  jekyll (~> 3.9.2)
-  jekyll-feed (~> 0.15.1)
-  jekyll-theme-midnight
+  jekyll-feed (~> 0.12)
+  minima (~> 2.5)
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)
