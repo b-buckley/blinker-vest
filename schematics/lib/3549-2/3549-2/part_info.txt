@@ -1,0 +1,9 @@
+Manufacturer=Keystone Electronics
+PartNumber=3549-2
+PartCategory=Fuse
+PackageCategory=Other
+PinCount=4
+Version=1.2
+Released=2019-08-20 12:57:48
+Downloaded=2022-03-08 19:42:43
+3D=Y
