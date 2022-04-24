@@ -1,0 +1,10 @@
+#main links
+main:
+  - title: "Inspiration and Planning"
+    url: /inspiration-planning.html
+  - title: "Control Circuit"
+    url: /circuit.html
+  - title: "Board and Enclosure"
+    url: /board-enclosure.html
+  - title: "Software"
+    url: /software.html
