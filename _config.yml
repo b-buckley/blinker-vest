@@ -30,7 +30,7 @@ github_username:  b-buckley
 #Site Author
 author:
   name: "Ben Buckley"
-  bio: "AAEET and rising 3rd year student in Vt. Tech's Electromechanical Engineering program"
+  bio: "AEET and rising 3rd year student in Vt. Tech's Electromechanical Engineering program"
   location: "Barre, VT"
   email: "ben.buckley.vt@gmail.com"
 
@@ -38,6 +38,7 @@ author:
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 plugins:
   - jekyll-feed
+    #https://twitter.com/mmistakes/status/1048190447024312320?s=20&t=BCa7FtpIvOuOOcefOvWFpw
   - jekyll-include-cache
 
 # Reading Files
