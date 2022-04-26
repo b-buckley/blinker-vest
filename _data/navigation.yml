@@ -1,10 +1,10 @@
 #main links
 main:
   - title: "Inspiration and Planning"
-    url: /inspiration-planning.html
+    url: /inspiration-planning/
   - title: "Control Circuit"
-    url: /circuit.html
-  - title: "Board and Enclosure"
-    url: /board-enclosure.html
+    url: /circuit/
+  - title: "Hardware"
+    url: /hardware/
   - title: "Software"
-    url: /software.html
+    url: /software/

@@ -1,1 +1,0 @@
-Board and Enclosure

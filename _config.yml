@@ -27,10 +27,21 @@ url: "https://b-buckley.github.io" # the base hostname & protocol for your site,
 #twitter_username: nunyabidness
 github_username:  b-buckley
 
+#Site Author
+author:
+  name: "Ben Buckley"
+  bio: "AAEET and rising 3rd year student in Vt. Tech's Electromechanical Engineering program"
+  location: "Barre, VT"
+  email: "ben.buckley.vt@gmail.com"
+
 # Build settings
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 plugins:
   - jekyll-feed
+
+# Reading Files
+include:
+  - _pages
 
 minimal_mistakes_skin:  "dark"
 
@@ -40,8 +51,10 @@ defaults:
     path: ""
     type: pages
   values:
-    layout: single 
-    classes: wide
+    author_profile: true
+    related: false
+    layout: single
+#    classes: wide
         
 # Exclude from processing.
 # The following items will not be processed, by default.
