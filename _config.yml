@@ -44,18 +44,18 @@ plugins:
 include:
   - _pages
 
-minimal_mistakes_skin:  "dark"
+minimal_mistakes_skin: "dark"
 
 defaults:
   # _pages
   - scope:
-    path: ""
-    type: pages
-  values:
-    author_profile: true
-    related: false
-    layout: single
-#    classes: wide
+      path: ""
+      type: pages
+    values:
+      author_profile: true
+      related: false
+      layout: single
+      classes: wide
         
 # Exclude from processing.
 # The following items will not be processed, by default.
