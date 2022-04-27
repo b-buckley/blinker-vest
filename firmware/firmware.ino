@@ -11,17 +11,16 @@
 #define CMR_RESOLUTION 1024
 
 //Pin Definition Macros
-#define PIN_LED 13
 #define PIN_LEFT_SIG 2
-#define PIN_BRAKE_SIG 6 //Pin 6 on prototype, Pin 11 on final board
+#define PIN_BRAKE_SIG 4
 #define PIN_RIGHT_SIG 3
 #define PIN_DATA 12
 
 //LED PIXEL Macros
-#define NUM_PIXELS 3
-#define LEFT_OUT 2
+#define LED_COLS 17
+#define LED_ROWS 4 
+#define LEFT_OUT 0
 #define BRAKE_OUT 1
-#define RIGHT_OUT 0
 
 //State Macros
 #define OFF 0
@@ -39,17 +38,21 @@ volatile int sigLeftState,
     previousTime = 0,
     currentTime,
     leftFrameCount = 0,
+    rightFrameCount = 0,
     sigLeftMark = 0,
     sigLeftCurrTime,
     sigLeftSeconds,
     sigRightMark = 0,
     sigRightCurrTime,
-    sigRightSeconds,
-    i;
+    sigRightSeconds;
 
-CRGB leds[NUM_PIXELS];
+int NUM_PIXELS;   
+
+CRGB leds[LED_ROWS * LED_COLS];
 
 void setupInterrupt_Timer(){
+
+    NUM_PIXELS = LED_ROWS * LED_COLS;
 
     //This timer interrupt setup code borrowed from
     // https://www.instructables.com/Arduino-Timer-Interrupts/
@@ -69,65 +72,70 @@ void setupInterrupt_Timer(){
     TIMSK1 |= (1 << OCIE1A);
 }
 
+void frameFill(int offset, int width, int hue, int sat, int bright) {
+
+    int startCell,
+        endCell;
+
+    for (int row = 0; row < LED_ROWS; row++) {
+        if (!(row % 2)) startCell = (row * LED_COLS) + offset; 
+        else startCell = (((row + 1) * LED_COLS) - 1) - (offset + (width -1));
+                
+        endCell = startCell + width; 
+
+        for (int cell = startCell; cell < endCell; cell++) {
+            leds[cell] = CHSV(hue,sat,bright);
+        }
+    }
+}
+
 void leftFrameHandler() {
 
+    #define LEFT_OFFSET 0
+    #define LEFT_WIDTH 6
     #define DUTY_CYCLE (TIMER_FREQUENCY/2)
         
     if (sigLeftState) {
         if (leftFrameCount == TIMER_FREQUENCY) leftFrameCount = 0;
-        if (leftFrameCount == 0) leds[LEFT_OUT] = CHSV(40,255,255);
-        if (leftFrameCount > DUTY_CYCLE) leds[LEFT_OUT] = CHSV(0,0,0);
+        if (leftFrameCount == 0) frameFill(LEFT_OFFSET,LEFT_WIDTH,0,0,0); 
+        if (leftFrameCount > DUTY_CYCLE) frameFill(LEFT_OFFSET,LEFT_WIDTH,40,255,255); 
         leftFrameCount++;
     }
-    else leds[LEFT_OUT] = CHSV(40,255,100);
+    else frameFill(LEFT_OFFSET,LEFT_WIDTH,40,255,100); 
+}
+
+void rightFrameHandler() {
+
+    #define RIGHT_OFFSET 11
+    #define RIGHT_WIDTH 6
+    #define DUTY_CYCLE (TIMER_FREQUENCY/2)
+        
+    if (sigRightState) {
+        if (rightFrameCount == TIMER_FREQUENCY) rightFrameCount = 0;
+        if (rightFrameCount == 0) frameFill(RIGHT_OFFSET,RIGHT_WIDTH,0,0,0); 
+        if (rightFrameCount > DUTY_CYCLE) frameFill(RIGHT_OFFSET,RIGHT_WIDTH,40,255,255);
+        rightFrameCount++;
+    }
+    else frameFill(RIGHT_OFFSET,RIGHT_WIDTH,40,255,100);
 }
 
 ISR(TIMER1_COMPA_vect){
+
+    #define BRAKE_OFFSET 6
+    #define BRAKE_WIDTH 5
+
     //Quick-n-dirty brake signal handling
     if (sigBrake) {
-        leds[BRAKE_OUT] = CHSV(0,255,255);
+       frameFill(BRAKE_OFFSET,BRAKE_WIDTH,0,255,255); 
     }
     else {
-        leds[BRAKE_OUT] = CHSV(0,255,100);
+       frameFill(BRAKE_OFFSET, BRAKE_WIDTH,0,255,100);
     }
 
     //Handle left signal
     leftFrameHandler();
-/*
-    if (sigLeftState) {
- 
-           
-        if(sigLeftMark == 0) sigLeftMark = millis();
-        sigLeftCurrTime = millis();
-        sigLeftSeconds = (sigLeftCurrTime - sigLeftMark) / 1000;
-        if (sigLeftSeconds % 2) {
-            leds[LEFT_OUT] = CRGB::Yellow;
-        }
-        else {
-            leds[LEFT_OUT] = CRGB::Black;
-        }
-    }
-    else {
-        leds[LEFT_OUT] = CRGB::Black;
-    }
-*/
     //Right turn handling
-    if (sigRightState) {
-        
-        if(sigRightMark == 0) sigRightMark = millis();
-        sigRightCurrTime = millis();
-        sigRightSeconds = (sigRightCurrTime - sigRightMark) / 1000;
-        if (sigRightSeconds % 2) {
-            leds[RIGHT_OUT] = CRGB::Yellow;
-        }
-        else {
-            leds[RIGHT_OUT] = CRGB::Black;
-        }
-    }
-    else {
-        leds[RIGHT_OUT] = CRGB::Black;
-    }
-
+    rightFrameHandler();
     //Send the resulting frame to LED data out
     FastLED.show();
 }    
@@ -158,6 +166,7 @@ void rightSignalHandler(){
     if (sigRight) { //If right turn signal is on now, it was off previously
         // Do all the WAS-OFF stuff
         sigRightState = ON;
+        rightFrameCount = 0;
     }
     else {
         // Do all the WAS_ON stuff
@@ -167,11 +176,11 @@ void rightSignalHandler(){
 
 void setup() {
     signal = 0;
-    pinMode(PIN_LED,OUTPUT);
+    //pinMode(PIN_LED,OUTPUT);
     pinMode(PIN_LEFT_SIG,INPUT);
     pinMode(PIN_BRAKE_SIG,INPUT);
     pinMode(PIN_RIGHT_SIG,INPUT);
-    digitalWrite(PIN_LED,LOW);
+    //digitalWrite(PIN_LED,LOW);
 
     cli();  //Disable all interrupts while setting up interrupts
     setupInterrupt_Timer();
