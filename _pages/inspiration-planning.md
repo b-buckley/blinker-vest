@@ -38,6 +38,6 @@ I also wrote a more thorough, full-text version of the proposal, though it conta
 
 More about the circuit design can be found on the [Circuit]({{ site.baseurl }}/circuit/) page.
 
-The build of the control board and enclosure is documented at [Board and Enclosure]({{ site.baseurl }}/board-enclosure/).
+The build of the control board and enclosure is documented at [Hardware]({{ site.baseurl }}/hardware/).
 
-To read about programming the controller, see [Software]({{ site.url }}/software).
+To read about programming the controller, see [Software]({{ site.url }}/software/).

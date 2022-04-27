@@ -29,8 +29,12 @@ github_username:  b-buckley
 
 #Site Author
 author:
-  name: "Ben Buckley"
-  bio: "AEET and rising 3rd year student in Vt. Tech's Electromechanical Engineering program"
+  name: "Ben Buckley (they/them)"
+  bio: |-
+    * AEET
+    * Rising 3rd year student in Electromechanical Engineering
+    * Electronics Tech at AllEarth Renewables
+    * Motorcycle rider, game player, robot liker.
   location: "Barre, VT"
   email: "ben.buckley.vt@gmail.com"
 
