@@ -52,12 +52,15 @@ I wrote a more elaborated version of the first sketch, for this, but it was lost
 
 ### The Final Prototype
 
-{% include gallery id="prototype_final" caption="The final prototype of the control circuit, three momentary switches providing the independent input signals and three LED pixels standing in for the array" %}
-### Final board
-#### blinker demo?
+{% include gallery id="prototype_final" caption="The final prototype of the control circuit. Three momentary switches provide the input signals and three LED pixels stand in for the array" %}
+
+{% include video id="AJSHlOI3ic4" provider="youtube" %}
+
+This [arduino sketch](https://github.com/b-buckley/blinker-vest/blob/f05b980c568d5157cf4c2e24acc53ab7f0d04133/arduino/ws2811_test/ws2811_test.ino) is shown in the video.  More about the software lives on the [software page]({{ site.baseurl }}/software/).
+
 ## PCB Design and Build
-### schematic
-### design considerations:
+### Schematic and Build Gallery Goes Here
+
   * In one side, out the other
   * Fuse order follows pin order
   * Corner mount holes
@@ -65,5 +68,19 @@ I wrote a more elaborated version of the first sketch, for this, but it was lost
   * USB port availability
 
 ## Vest
+
+<!-- VEST GALLERY -->
+
+Vest write-up
+
 ## Enclosure
+
+<!-- ENCLOSURE GALLERY -->
+
+Enclosure write-up
+
 ## Bike Side
+
+<!-- HARNESS GALLERY -->
+
+Bike harness write-up
