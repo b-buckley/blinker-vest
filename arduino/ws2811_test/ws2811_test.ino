@@ -6,9 +6,9 @@
 #include "FastLED.h"
 
 #define PIN_LED 13
-#define PIN_LEFT_SIG 5
-#define PIN_BRAKE_SIG 6
-#define PIN_RIGHT_SIG 7
+#define PIN_LEFT_SIG 4
+#define PIN_BRAKE_SIG 3
+#define PIN_RIGHT_SIG 2
 #define PIN_DATA 12
 
 #define NUM_PIXELS 3
