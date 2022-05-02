@@ -36,7 +36,6 @@ volatile int sigLeftState,
     sigRightStatePrev,
     signal = 0,
     previousTime = 0,
-    currentTime,
     leftFrameCount = 0,
     rightFrameCount = 0,
     sigLeftMark = 0,
@@ -51,8 +50,6 @@ int NUM_PIXELS;
 CRGB leds[LED_ROWS * LED_COLS];
 
 void setupInterrupt_Timer(){
-
-    NUM_PIXELS = LED_ROWS * LED_COLS;
 
     //This timer interrupt setup code borrowed from
     // https://www.instructables.com/Arduino-Timer-Interrupts/
@@ -121,6 +118,14 @@ void rightFrameHandler() {
 
 ISR(TIMER1_COMPA_vect){
 
+    //Handle left signal
+    leftFrameHandler();
+    //Right turn handling
+    rightFrameHandler();
+
+//##### The block between these comments should be extracted to a handler function
+//##### ... but because it's the brake, it should always go last before FastLED.show()
+
     #define BRAKE_OFFSET 6
     #define BRAKE_WIDTH 5
 
@@ -132,10 +137,8 @@ ISR(TIMER1_COMPA_vect){
        frameFill(BRAKE_OFFSET, BRAKE_WIDTH,0,255,100);
     }
 
-    //Handle left signal
-    leftFrameHandler();
-    //Right turn handling
-    rightFrameHandler();
+//##### That's the end of the brake handler.
+
     //Send the resulting frame to LED data out
     FastLED.show();
 }    
@@ -176,6 +179,8 @@ void rightSignalHandler(){
 
 void setup() {
     signal = 0;
+    NUM_PIXELS = LED_ROWS * LED_COLS;
+
     //pinMode(PIN_LED,OUTPUT);
     pinMode(PIN_LEFT_SIG,INPUT);
     pinMode(PIN_BRAKE_SIG,INPUT);
@@ -194,9 +199,6 @@ void setup() {
 }
 
 void loop() {
-
-    previousTime = currentTime;
-    currentTime = millis();
 
     //One var for each signal... replace with ext. interrupts?
     sigBrake = digitalRead(PIN_BRAKE_SIG);
