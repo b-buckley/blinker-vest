@@ -30,6 +30,50 @@ prototype_final:
     image_path: /assets/images/prototype_final.jpg
     alt: "A breadboard with three momentary switches providing input signals to an Arduino Nano.  It drives a string of three LED pixels, simulating the turn and brake signals on a card."
     title: "All the pieces are in place and working!"
+
+board_gallery:
+  - url: /assets/images/pcb-schematic_final.png
+    image_path: /assets/images/pcb-schematic_final-th.png
+    alt: "Scaled-down image of the PCB schematic for the control circuit."
+    title: "Schematic"
+  - url: /assets/images/board-assembled_bottom.jpg
+    image_path: /assets/images/board-assembled_bottom-th.jpg
+    alt: "The bottom side of the assembled PCB, traces cut into a copper sheet. To the right, the words 'Ben Buckley/ELT-2720' are etched into the copper."
+    title: "PCB assembled, bottom side, traces and connections"
+  - url: /assets/images/board-assembled_top.jpg
+    image_path: /assets/images/board-assembled_top-th.jpg
+    alt: "The top side of the assembled PCB, with the components."
+    title: "PCB assembled, top side, components"
+
+vest_sketch:
+  - url: /assets/images/vest-construction-draft.jpg
+    image_path: /assets/images/vest-construction-draft_th.jpg
+    alt: "A page of notebook paper with sketches and measurements of the yoke of a denim vest."
+    title: "Early sketches and measurements towards laying out the pixel grid on the vest."
+
+vest_build:
+  - url: /assets/images/vest-build_verticals.jpg
+    image_path: /assets/images/vest-build_verticals_th.jpg
+    alt: "A black denim vest on an ironing board with regularly spaced vertical lines on the yoke."
+    title: "Laying out the columns"
+  - url: /assets/images/vest-build_hashes.jpg
+    image_path: /assets/images/vest-build_hashes_th.jpg
+    alt: "Black denim vest, on an ironing board, with hashes marking the vertical position of future grommets."
+    title: "Laying out the rows"
+  - url: /assets/images/vest_build_grommets.jpg
+    image_path: /assets/images/vest_build_grommets_th.jpg
+    alt: "Black denim vest with grommets set where the grid was marked."
+    title: "Grommeting the grid"
+
+vest_build_2:
+  - url: /assets/images/vest-build_pixels-insde.jpg
+    image_path: /assets/images/vest-build_pixels-inside_th.jpg
+    alt: "The inside of the vest with the pixels set in the grommets"
+    title: "Pixel grid assembled, inside the vest"
+  - url: /assets/images/vest-build_led-pixels_outside.jpg
+    image_path: /assets/images/vest-build_led-pixels_outside_th.jpg
+    alt: "The outside of the vest with the pixel grid complete"
+    Title: "Pixel grid assembled, from the outside"
 ---
 ## Prototypes
 ### The Basics
@@ -59,28 +103,52 @@ I wrote a more elaborated version of the first sketch, for this, but it was lost
 This [arduino sketch](https://github.com/b-buckley/blinker-vest/blob/f05b980c568d5157cf4c2e24acc53ab7f0d04133/arduino/ws2811_test/ws2811_test.ino) is shown in the video.  More about the software lives on the [software page]({{ site.baseurl }}/software/).
 
 ## PCB Design and Build
-### Schematic and Build Gallery Goes Here
 
-  * In one side, out the other
-  * Fuse order follows pin order
-  * Corner mount holes
-  * Strain relief holes
-  * USB port availability
+{% include gallery id="board_gallery" caption="The schematic and pictures of the board, fully assembled except for the board leads" %}
+
+### Design Considerations
+
+The layout of the PCB was determined by following factors:
+
+  * __USB Port Availability__: As long as the project is in active development, I'll need access to the Nano's USB port.  Since the USB port sits high on the microcontroller, some low-lying components can be between it and the edge of the board, but it largely defines one corner of the board.  The digital pins have to be accessible to the signal conditioning elements, so that edge of the Nano goes to the middle of the board.
+  * __In one side, out the other__: The attachment points for the board leads define either "end" of the board and the minimum width of its narrow dimension.  The bike-side leads are laid out to correspond to the physicsal order of the digital pins. Since D2 and D3 are the two pins that can provide external interrupts, the turn signal have to have the outer position.  The brake is next because its trace can come down the inside the shortest distance without crossing the others.  Ground comes next because it only has to connect to the ground pour. Power passes under the microcontroller all the way to the LED end of the board, so it's last.
+
+  * __Fuse order follows pin order__: Power goes on right, closest to the 150mm power trace and the V<sub>in</sub> pin of the Nano.  The signal fuses go down the left side of the board.  Beside the Nano, they're the physically largest components, so they're stack height determines the length of the long dimension of the board.
+
+  * __Strain relief holes__: As part of a garment, the board and especially the board leads will be subject to a lot moving and bending.  To minimize the chances of a broken joint at the board, the strain relief holes are the end-most elements of the board.
+
+  * __Corner mount holes__: With the other dimensions and spacings defined, the 4mm corner mounting holes are the last extensions of the board's footprint.
+
+{% include figure image_path="/assets/images/board-complete_controls.jpg" caption="The completed control board with board leads attached.  Also shown is the 'motorcycle' I use to control it." %}
 
 ## Vest
+### First Sketches
 
-<!-- VEST GALLERY -->
+{% include gallery id="vest_sketch" caption="Initial notes on the vest" layout=" " %}
 
-Vest write-up
+### Vest Build
+
+{% include gallery id="vest_build" caption="Laying out and grommeting the grid" %}
+
+The measurements I took and the assumptions I made about the geometry of the vest's yoke weren't perfect, so you may notice that the middle columns get shorter and tighter as the grid passes under the back of the collar.
+
+{% include gallery id="vest_build_2" caption="Finished vest" %}
+
+"Finished" vest.  There's a lot of polish left in tacking down the wires, securing the pixels (epoxy?), running leads to the board, etc...
+
+Below is a video of the whole show up and running.  A lot of work had to happen on the [software side] of the project to get it this point:
+
+{% include video id="-jxQSHBrT6U" provider="youtube" %}
 
 ## Enclosure
 
 <!-- ENCLOSURE GALLERY -->
 
-Enclosure write-up
+Stay tuned!  This is the last thing I still have to build.
 
 ## Bike Side
 
 <!-- HARNESS GALLERY -->
 
-Bike harness write-up
+...except for the harness on the bike side.  For now, a breadboard, three push-button switches, and a 12V DC supply are standing in for the motorcycle. (See above!)
+
