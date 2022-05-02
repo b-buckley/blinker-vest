@@ -66,7 +66,7 @@ vest_build:
     title: "Grommeting the grid"
 
 vest_build_2:
-  - url: /assets/images/vest-build_pixels-insde.jpg
+  - url: /assets/images/vest-build_pixels-inside.jpg
     image_path: /assets/images/vest-build_pixels-inside_th.jpg
     alt: "The inside of the vest with the pixels set in the grommets"
     title: "Pixel grid assembled, inside the vest"
