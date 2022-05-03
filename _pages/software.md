@@ -1,6 +1,26 @@
 ---
 title: Software
 permalink: /software/
+
+scratch-notes:
+  - url: /assets/images/software-scratch-notes.jpg
+    image_path: /assets/images/software-scratch-notes-th.jpg
+    alt: "A sheet of notebook paper with hand-scratched notes all over it, in several orientations."
+  - url: /assets/images/software-scratch-notes-2.jpg
+    image_path: /assets/images/software-scratch-notes-2-th.jpg
+    alt: "A sheet of notebook paper with hand-scratched notes all over it, in several orientations."
+
+state-machine-initial:
+  - url: /assets/images/firmware_state-machine-diagram_initial.png
+    image_path: /assets/images/firmware_state-machine-diagram_initial-th.jpg
+    alt: "A diagram showing the state transitions planned for the board's firmware"
+    title: "Initial state machine diagram from the planning phase of the project."
+
+state-machine-final:
+  - url: /assets/images/firmware_state-machine-diagram_final.png
+    image_path: /assets/images/firmware_state-machine-diagram_final-th.png
+    alt: "A diagram showing the state transitions and global variables of firmware.ino"
+    title: "State-machine diagram demonstrating the operations of firmware.ino"
 ---
 ## Repository
 
@@ -20,7 +40,15 @@ In its current version, ws2811_test.ino responds to three signals and emulates t
 
 ## Firmware
 
-### Initial State Diagram
+The current operating firmware for the traffic signal vest lives at [firmware.ino](https://github.com/b-buckley/blinker-vest/blob/main/arduino/firmware/firmware.ino) in the project's repository.  Below I track it's development from scratch notes on graph paper to the currently deployed software.
+
+### Initial Sofware Notes
+
+{% include gallery id="scratch-notes" %}
+
+### Planning State Diagram
+
+{% include gallery id="state-machine-initial" caption="The operating states of the board's firmware as imagined during the planning process." %}
 
 ### Design Considerations
 
@@ -32,3 +60,5 @@ In its current version, ws2811_test.ino responds to three signals and emulates t
 * __Independent frame assembly routines__: Each signal handler manipulates the grid separately in its own function.  This allows me to customize the animation response to each signal by chaning just a single block of code.  This calls for a smart set of global variables to hold enough state information, which is still a work in progress.  As it stands, I've only implemented simple ON-OFF solid, rectangular blocks of color specifically to K.I.S.S.
 
 ### Current State Diagram
+
+{% include gallery id="state-machine-final" caption="The states, transitions, and variables of [firmware.ino](https://github.com/b-buckley/blinker-vest/blob/main/arduino/firmware/firmware.ino)" %}
